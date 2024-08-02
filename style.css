@@ -67,6 +67,7 @@ li a:hover {
     display: flex;
     margin-top: 75px;
     padding: 60px;
+    padding-left: 20%;
     justify-content: center;
 }
 
@@ -88,7 +89,8 @@ li a:hover {
     color:  white;
     text-align: justify;
     padding: 0 75px;
-    z-index: 1000;
+    display: block;
+
 }
 
 .intro .description .Leo {
@@ -109,6 +111,69 @@ li a:hover {
     color: var(--secondary_color);
     font-size: 5rem;
     font-weight: bold;
+    position: relative;
+    min-width: 300px;
+}
+
+.description .programmer::before {
+    content: "Programmer";
+    color: var(--secondary_color);
+    animation: words 20s infinite;
+}
+
+.description .programmer::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 8px);
+    background-color: var(--primary_color);
+    border-left: 8px solid white;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #27282900;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+
+        content: "Frontend-Developer";
+
+    }
+    21%,40%{
+
+        content: "Web-Developer";
+
+    }
+    41%,60%{
+
+        content: "Electronic-Engineer";
+
+    }
+    61%,80%{
+
+        content: "Network-Engineer";
+
+    }
+    81%,100%{
+
+        content: "Backend-Developer";
+
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+    
 }
 
 .resumebtn {
@@ -165,12 +230,13 @@ li a:hover {
 
 
 .icons {
+    bottom: ;
     display: flex;
     gap: 30px;
     width: 100%;
-    height: 25%;
-    margin-top: 2rem;
-    justify-content: right;
+    height: 50%;
+    margin-top: 10px;
+    justify-content: end;
     align-items:end;
 
 }
@@ -214,6 +280,78 @@ li a:hover {
     background-color: white;
 }
 
+/*--------------Aboutme----------------------*/
+.myspec {
+    font-family: var(--fontsite);
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: #EEF7FF;
+}
+
+.myspec h1 {
+    font-size: 2.8rem;
+    font-weight: bolder;
+    color: var(--primary_color);
+    text-align: center;
+}
+
+.myspec .shortme {
+    font-size: 1.4rem;
+    text-align: center;
+    position: relative;
+
+
+}
+
+.fullabout {
+    width: 100%;
+    height: 60vh;
+    background-color:#EEF7FF ;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.fullabout .components {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.components .gradpic {
+    object-fit: contain;
+    width: 40%;
+    height: auto;
+}
+
+.components .moreinfo {
+    width: 700px;
+    text-align: justify;
+    height: auto;
+    font-size: 1.6rem;
+    background-color: var(--primary_color);
+    color: white;
+    padding: 30px;
+    border-radius: 30px;
+    font-family: var(--fontsite);
+    line-height: 50px;
+}
+
+/*------------------------------------------*/
+
+
+
+
 /*--------------footer----------------------*/
 
 footer {
@@ -250,11 +388,12 @@ footer .feet {
     margin-right: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     background-color: var(--primary_color);
     border-radius: 20px;
     overflow: hidden;
+    gap: 70px;
 }
 
 .lowerbar h1 {
@@ -269,7 +408,9 @@ footer .feet {
 .info {
     display:flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .info input {
@@ -285,6 +426,7 @@ footer .feet {
 }
 
 .info #Message {
+    width: 400px;
     color: white;
     text-align: justify;
     font-size: 1.6rem;
@@ -293,7 +435,7 @@ footer .feet {
     border: 3px solid var(--secondary_color);
     border-radius: 10px;
     height: 60px;
-    transition: .5s;
+    transition: .5s ease-out;
     resize: none;
 }
 
@@ -303,6 +445,36 @@ footer .feet {
 
 #Message::placeholder {
     text-align: center;
+}
+
+.info .submitbtn {
+    font-family: var(--fontsite);
+    font-weight: 1.3px;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 230px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid var(--secondary_color);
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 40px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.info .submitbtn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px var(--secondary_color);
+
+}
+
+.lowerbar .footcby {
+    font-family: var(--fontsite);
+    font-size: 1.2rem;
+    padding: 10px 0;
 }
 
 /*-------------------------------------------*/
