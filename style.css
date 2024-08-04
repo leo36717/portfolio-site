@@ -1195,6 +1195,7 @@ footer .feet {
         align-items: center;
         display: flex;
         justify-content: space-around;
+        overflow: hidden;
     }
 
     .skillbox1 {
@@ -1241,7 +1242,7 @@ footer .feet {
     
     .text1 {
         padding-top: 0px;
-        font-size: .7rem;
+        font-size: .5rem;
         font-weight: 700;
         margin-top: 20px;
     }
@@ -1290,7 +1291,7 @@ footer .feet {
     
     .text2 {
         padding-top: 0px;
-        font-size: .7rem;
+        font-size: .5rem;
         font-weight: 700;
         margin-top: 20px;
     }
@@ -1342,6 +1343,7 @@ footer .feet {
         font-size: .5rem;
         font-weight: 700;
         margin-top: 20px;
+        
     }
 
     footer .feet {
@@ -1410,10 +1412,10 @@ footer .feet {
     }
     
     .info #Message {
-        width: 250px;
+        width: 195px;
         color: white;
         text-align: justify;
-        font-size: 1rem;
+        font-size: .6rem;
         font-family: var(--fontsite);
         background-color: transparent;
         border: 1px solid var(--secondary_color);
@@ -1437,7 +1439,7 @@ footer .feet {
         width: 100px;
         background-color: transparent;
         border: 1px solid var(--secondary_color);
-        font-size: .6rem;
+        font-size: .8rem;
         color: white;
         border-radius: 40px;
         transition: .2s;
@@ -1461,55 +1463,7 @@ footer .feet {
 
 }
 
-@media (max-width: 300px) {
-    .nav {
-        height: 10%;
-        position:relative;
-    }
 
-    .nav .logo {
-        font-size: .6rem;
-    }
-
-    .pages li {
-        font-size: .4rem;
-    }
-
-    .intro {
-        margin-top: 30px;
-        height: 30%;
-        display: inline-flex;
-        flex-direction: column;
-        gap: 1px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .intro .myimg {
-        width: 70%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .intro .description {
-        width: 300px;
-        height: auto;
-        font-size: .6rem;
-    }
-
-    .icons a {
-        width: 20px;
-        height: 20px;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .description .h1 {
-        font-size: 1.2rem;
-    }
-
-}
 /*Login page */
 
 .userinfo {
